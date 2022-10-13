@@ -1,0 +1,77 @@
+.cookies {
+    position: fixed;
+    z-index: 90;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #2d2d2d;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    &.shown {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+}
+
+.cookies__row {
+    padding: 2.4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @include breakpoint(mobile) {
+        padding: 1.8rem 0;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}
+
+.cookies__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    color: #868c95;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
+
+    a {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: all 0.2s;
+        &:link,
+        &:visited {
+            color: white;
+        }
+
+        &:hover {
+            text-decoration-color: white;
+        }
+    }
+}
+
+.cookies__btn {
+    flex-shrink: 0;
+    margin-left: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    text-decoration-line: underline;
+    transition: all 0.2s;
+
+    @include breakpoint(mobile) {
+        font-size: 1.5rem;
+    }
+    &:hover {
+        text-decoration-color: transparent;
+    }
+}
