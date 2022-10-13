@@ -1,0 +1,61 @@
+.not-found {
+    flex-grow: 1;
+    background: #579af4;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
+
+.not-found__content {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        padding-top: 9rem;
+    }
+}
+
+.not-found__image-wrapper {
+    position: relative;
+    margin-top: auto;
+}
+
+.not-found__image {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    @include breakpoint(mobile) {
+        width: 180vw;
+        max-width: none;
+    }
+}
+
+.not-found__text {
+    left: 50%;
+    top: 17rem;
+    z-index: 20;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    position: absolute;
+
+    @include breakpoint(mobile) {
+        position: static;
+        left: auto;
+        top: 0;
+        margin-bottom: 5rem;
+        order: -1;
+        font-size: 3.8rem;
+        line-height: 1.15;
+        font-weight: 800;
+    }
+}
