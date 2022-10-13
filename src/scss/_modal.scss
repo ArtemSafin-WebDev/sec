@@ -91,7 +91,7 @@
     font-weight: 800;
     font-size: 4.6rem;
     line-height: 4.7rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 
     @include breakpoint(mobile) {
         font-size: 3.2rem;
@@ -200,7 +200,7 @@ textarea.modal__form-input {
 
 .modal__material {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2rem;
     line-height: 2.4rem;
     text-decoration-line: underline;
@@ -210,12 +210,17 @@ textarea.modal__form-input {
     border: 1px solid #579af4;
     border-radius: 1rem;
     box-shadow: 1rem 1rem 0 0 #bcd7fb;
-
+    display: block;
     svg {
         display: inline-block;
         width: 1.5rem;
         height: 1.5rem;
         fill: var(--primary-color);
         vertical-align: middle;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
     }
 }

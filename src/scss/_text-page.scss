@@ -297,4 +297,9 @@
         margin-top: 0.2rem;
         margin-left: 0.3rem;
     }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
 }
