@@ -1,0 +1,159 @@
+.team {
+  background: #579AF4;
+  color: white;
+  padding-top: 8rem;
+  padding-bottom: 9rem;
+  margin-bottom: 8.5rem;
+
+  @include breakpoint(mobile) {
+    padding: 3rem 0;
+    margin-bottom: 4rem;
+  }
+}
+
+.team__top-row {
+  margin-bottom: 10rem;
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2.2rem;
+    align-items: flex-start;
+  }
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3rem;
+  }
+}
+
+.team__heading {
+  @include breakpoint(mobile) {
+    margin-bottom: 1rem;
+  }
+}
+
+.team__desc {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+}
+
+.team__list {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.5rem;
+  }
+}
+
+.team__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.team__card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border: 1px solid #FFFFFF;
+  border-radius: 1rem;
+  padding: 3rem;
+
+  @include breakpoint(mobile) {
+    padding: 1.5rem;
+  }
+}
+
+.team__card-top-row {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  margin-bottom: 2.7rem;
+
+  @include breakpoint(mobile) {
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.team__card-image-container {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  width: 21rem;
+  flex-shrink: 0;
+
+  @include breakpoint(mobile) {
+    width: 10rem;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+
+    padding-bottom: 120%;
+  }
+}
+
+
+.team__card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team__card-content {
+  width: 50%;
+  flex-grow: 1;
+}
+
+.team__card-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.6rem;
+  line-height: 5.2rem;
+  margin-bottom: 1.7rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+  }
+}
+
+.team__card-role {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.7rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+}
+
+.team__card-desc {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.7rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+}

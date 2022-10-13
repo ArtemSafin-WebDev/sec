@@ -1,0 +1,291 @@
+.page-footer {
+  border-top: .2rem solid #9BC6FF;
+  padding-top: 5rem;
+  padding-bottom: 5.4rem;
+
+  @include breakpoint(mobile) {
+    padding: 3rem 0;
+  }
+}
+
+.page-footer__top-row {
+  margin-bottom: 11rem;
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-gap: 2.2rem;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-template-areas: 'logo logo logo logo contacts contacts nav nav';
+  }
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.page-footer__logo {
+
+  @include breakpointMF(small-tablet) {
+    grid-area: logo;
+    justify-self: flex-start;
+  }
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+  }
+}
+
+.page-footer__logo-image {
+  width: 25rem;
+  height: auto;
+  display: block;
+
+
+  @include breakpoint(mobile) {
+    width: 7rem;
+
+  }
+}
+
+
+.page-footer__contacts {
+
+
+  @include breakpointMF(small-tablet) {
+    grid-area: contacts;
+  }
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3rem;
+  }
+}
+
+.page-footer__contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+  }
+}
+
+.page-footer__contacts-card-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  margin-bottom: .6rem;
+  color: #868C95;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+}
+
+.page-footer__contacts-card-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: all .2s;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .no-touch &:hover,
+  .touch &:active {
+    color: var(--primary-color);
+  }
+}
+
+.page-footer__nav {
+  grid-area: nav;
+
+  & > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    align-items: flex-start;
+
+    @include breakpoint(mobile) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-gap: 2rem;
+      align-items: flex-start;
+      grid-row-gap: 1.5rem;
+    }
+
+    & > li {
+      & > a {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2.7rem;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: all .2s;
+        display: block;
+
+        @include breakpoint(mobile) {
+          font-size: 1.8rem;
+          line-height: 1.2;
+        }
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+.page-footer__bottom-row {
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2.2rem;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-template-areas: 'company-name requisites' 'credentials made-by';
+  }
+}
+
+.page-footer__company-name {
+  grid-area: company-name;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: #868C95;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+}
+
+.page-footer__company-requisites {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: #868C95;
+
+
+  @include breakpointMF(small-tablet) {
+    grid-area: requisites;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+}
+
+.page-footer__credentials {
+  grid-area: credentials;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  align-items: flex-start;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+}
+
+.page-footer__copyright {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  color: #868C95;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+}
+
+.page-footer__policy {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  color: #868C95;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  &:link,
+  &:visited {
+    color: #868C95;
+  }
+
+  .no-touch &:hover,
+  .touch &:active {
+    color: var(--primary-color);
+  }
+}
+
+.page-footer__made-by {
+  grid-area: made-by;
+  justify-self: flex-start;
+  align-self: flex-end;
+  display: inline-flex;
+  gap: .8rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  color: #868C95;
+  align-items: center;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  &:link,
+  &:visited {
+    color: #868C95;
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 14.4rem;
+    height: 1.13rem;
+    fill: currentColor;
+    margin-top: .2rem;
+
+    @include breakpoint(mobile) {
+      margin-top: 0;
+      width: 12rem;
+      height: 1rem;
+    }
+  }
+
+  .no-touch &:hover,
+  .touch &:active {
+    color: var(--primary-color);
+  }
+
+}

@@ -1,0 +1,71 @@
+.about-intro {
+  padding-top: 18.8rem;
+  padding-bottom: 10rem;
+  overflow: hidden;
+
+  @include breakpoint(mobile) {
+    padding-top: 9rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.about-intro__shape {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  width: 144.2rem;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -50rem;
+  max-width: none;
+  @include breakpoint(mobile) {
+    width: 50rem;
+    left: -15rem;
+  }
+}
+
+.about-intro__row {
+  position: relative;
+  z-index: 1;
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2.2rem;
+    align-items: flex-start;
+  }
+}
+
+.about-intro__heading {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 9rem;
+  line-height: 1;
+
+  @include breakpoint(mobile) {
+    font-size: 3.6rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.about-intro__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  margin-top: 2rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  p {
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

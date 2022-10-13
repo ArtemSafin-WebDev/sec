@@ -1,0 +1,38 @@
+.cases-catalog {
+  padding-top: 19rem;
+  padding-bottom: 10rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 9rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.cases-catalog__main-heading {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 9rem;
+  line-height: 1.2;
+  margin-bottom: 4.5rem;
+  @include breakpoint(mobile) {
+    font-size: 3.6rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.cases-catalog__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 4rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.5rem;
+  }
+}
+
+.cases-catalog__list-item {
+  display: flex;
+  flex-direction: column;
+}

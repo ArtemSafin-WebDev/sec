@@ -1,0 +1,126 @@
+.advantages {
+  margin-bottom: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 4.5rem;
+  background: #2D2D2D;
+  color: white;
+
+  @include breakpoint(mobile) {
+    padding: 3rem 0;
+    margin-bottom: 4rem;
+  }
+}
+
+.advantages__top-row {
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2.2rem;
+    align-items: center;
+    margin-bottom: 7rem;
+  }
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+  }
+}
+
+.advantages__heading {
+  position: relative;
+  justify-self: flex-start;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+    background-image: url("../img/advantages-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 100%;
+    top: 100%;
+    margin-left: 2.6rem;
+  }
+
+  em {
+    background: var(--primary-color);
+    color: white;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    font-style: normal;
+    border-radius: .7rem;
+  }
+}
+
+.advantages__desc {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+}
+
+
+.advantages__list {
+
+}
+
+.advantages__list-item {
+  border-bottom: 1px solid #575757;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.advantages__card {
+  padding: 2rem 0;
+
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2.2rem;
+    align-items: flex-start;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 1.5rem 0;
+  }
+}
+
+.advantages__card-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.4rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+  }
+}
+
+.advantages__card-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+}
