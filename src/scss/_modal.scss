@@ -224,3 +224,119 @@ textarea.modal__form-input {
         color: var(--primary-color);
     }
 }
+
+.modal__form-select {
+    position: relative;
+
+    width: 100%;
+}
+
+.modal__form-select-btn {
+    height: 5.8rem;
+    background: #ffffff;
+    border: 1px solid #579af4;
+    border-radius: 1rem;
+    padding: 0 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    color: #868c95;
+    width: 100%;
+    transition: color 0.2s;
+
+    .selected & {
+        color: var(--text-color);
+    }
+
+    svg {
+        flex-shrink: 0;
+        width: 2.4rem;
+        height: 2.4rem;
+        transition: transform 0.2s;
+        fill: var(--primary-color);
+        transform: rotate(180deg);
+        position: relative;
+        z-index: 30;
+    }
+
+    .dropdown-shown & {
+        color: var(--primary-color);
+
+        svg {
+            transform: rotate(0);
+        }
+    }
+}
+
+.modal__form-select-btn-text {
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
+    // display: block;
+    text-align: left;
+}
+
+.modal__form-select-btn-text-wrapper {
+    width: 50%;
+    flex-grow: 1;
+    position: relative;
+    z-index: 30;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.modal__form-select-dropdown {
+    background: #ffffff;
+    border: 1px solid #579af4;
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 2.2rem;
+    padding-top: 5.5rem;
+    z-index: 25;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+    .dropdown-shown & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+    }
+}
+
+.modal__form-select-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.modal__form-select-item-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #868c95;
+    transition: color 0.2s;
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+.modal__form-select-item-btn-icon {
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    object-fit: contain;
+}

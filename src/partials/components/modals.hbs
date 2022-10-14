@@ -1,8 +1,7 @@
 <div class="modal js-modal" id="callback">
     <div class="modal__inner">
         <button class="modal__close js-close-modal">
-            <svg width="45" height="45" aria-hidden="true"
-                 class="icon-cross">
+            <svg width="45" height="45" aria-hidden="true" class="icon-cross">
                 <use xlink:href="#cross"></use>
             </svg>
         </button>
@@ -16,13 +15,70 @@
                 </div>
                 <div class="modal__form-field">
                     <input type="tel" class="modal__form-input js-phone-input" name="your-phone" placeholder="Телефон"
-                           required data-parsley-phone="">
+                        required data-parsley-phone="">
                 </div>
                 <div class="modal__form-field">
                     <input type="email" class="modal__form-input" name="your-email" placeholder="Почта" required>
                 </div>
                 <div class="modal__form-field">
                     <input type="text" class="modal__form-input" name="your-company" placeholder="Организация">
+                </div>
+                <div class="modal__form-field">
+                    <div class="modal__form-select js-modal-form-select">
+                        <input type="hidden" name="communication-type">
+                        <button class="modal__form-select-btn" type="button">
+                            <span class="modal__form-select-btn-text-wrapper">
+                                <span class="modal__form-select-btn-text">
+                                    Способ связи
+                                </span>
+                            </span>
+                            <svg width="45" height="45" aria-hidden="true" class="icon-dropdown-arrow">
+                                <use xlink:href="#dropdown-arrow"></use>
+                            </svg>
+                        </button>
+                        <div class="modal__form-select-dropdown">
+                            <div class="modal__form-select-dropdown-inner">
+                                <ul class="modal__form-select-list">
+                                    <li class="modal__form-select-list-item">
+                                        <button class="modal__form-select-item-btn" type="button">
+                                            <img src="img/social/whatsapp.svg" alt=""
+                                                class="modal__form-select-item-btn-icon">
+                                            <span class="modal__form-select-item-btn-text">
+                                                WhatsApp
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="modal__form-select-list-item">
+                                        <button class="modal__form-select-item-btn" type="button">
+                                            <img src="img/social/telegram.svg" alt=""
+                                                class="modal__form-select-item-btn-icon">
+                                            <span class="modal__form-select-item-btn-text">
+                                                Telegram
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="modal__form-select-list-item">
+                                        <button class="modal__form-select-item-btn" type="button">
+                                            <img src="img/social/phone.svg" alt=""
+                                                class="modal__form-select-item-btn-icon">
+                                            <span class="modal__form-select-item-btn-text">
+                                                Позвонить по телефону
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="modal__form-select-list-item">
+                                        <button class="modal__form-select-item-btn" type="button">
+                                            <img src="img/social/mail.svg" alt=""
+                                                class="modal__form-select-item-btn-icon">
+                                            <span class="modal__form-select-item-btn-text">
+                                                Написать на почту
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal__form-field">
                     <textarea name="your-comment" class="modal__form-input" placeholder="Комментарий"></textarea>
@@ -40,8 +96,7 @@
 <div class="modal js-modal" id="callback-success">
     <div class="modal__inner">
         <button class="modal__close js-close-modal">
-            <svg width="45" height="45" aria-hidden="true"
-                 class="icon-cross">
+            <svg width="45" height="45" aria-hidden="true" class="icon-cross">
                 <use xlink:href="#cross"></use>
             </svg>
         </button>
@@ -53,8 +108,7 @@
         </div>
         <a href="#" class="modal__material">
             Как защитить свой товарный знак
-            <svg width="45" height="45" aria-hidden="true"
-                 class="icon-diagonal-arrow">
+            <svg width="45" height="45" aria-hidden="true" class="icon-diagonal-arrow">
                 <use xlink:href="#diagonal-arrow"></use>
             </svg>
         </a>

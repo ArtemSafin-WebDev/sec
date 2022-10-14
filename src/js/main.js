@@ -14,6 +14,7 @@ import stepsSlider from './stepsSlider';
 import casesSlider from './casesSlider';
 import reviewsSlider from './reviewsSlider';
 import cookies from './cookies';
+import modalFormSelect from './modalFormSelect';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     casesSlider();
     reviewsSlider();
     cookies();
+    modalFormSelect();
 });
 
 document.addEventListener('lazyloaded', () => {

@@ -100,7 +100,7 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.4s, visibility 0s linear 0.4s;
-        padding: 0 var(--content-padding);
+        padding: 0 5rem;
         padding-top: 9rem;
         padding-bottom: 4rem;
         .mobile-menu-open & {
@@ -116,7 +116,7 @@
         grid-column: 2 / 7;
     }
     @include breakpoint(mobile) {
-        margin-bottom: 3rem;
+        margin-bottom: 3.6rem;
     }
 
     & > ul {
@@ -128,7 +128,7 @@
         @include breakpoint(mobile) {
             flex-direction: column;
             align-items: flex-start;
-            gap: 2rem;
+            gap: 3.6rem;
         }
 
         & > li > a {
@@ -143,8 +143,10 @@
             }
 
             @include breakpoint(mobile) {
-                font-size: 2.4rem;
-                line-height: 1.2;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 2.8rem;
+                line-height: 3.8rem;
             }
         }
 
@@ -164,6 +166,10 @@
     white-space: nowrap;
     @include breakpoint(mobile) {
         align-self: flex-start;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.8rem;
+        line-height: 3.8rem;
     }
 
     &::before {
@@ -288,4 +294,23 @@
             }
         }
     }
+}
+
+.page-header__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+    align-items: flex-start;
+    margin-top: 7rem;
+
+    @include breakpointMF(small-tablet) {
+        display: none;
+    }
+}
+
+.page-header__contacts-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.7rem;
 }
